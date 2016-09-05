@@ -1,0 +1,58 @@
+<job id="rename">
+
+<script language="VBScript">
+
+ function vbinput(msg,title,ID)
+
+	vbinput = InputBox(msg,title,ID)
+ end function
+
+</script>
+
+
+<script language="JavaScript">
+var name = vbinput("頭に追加するID名を「_」付きで入力して下さい","ID入力","Hoge_");
+
+var objApl;
+var objFolder;
+var objFolderItems;
+var objItem;
+var i;
+var BIF_NON                 =   0;  // 全てのオプションがない状態
+var BIF_EDITBOX             =  16;  // フォルダ名を指定するテキストボックスを表示
+var BIF_NONEWFOLDERBUTTON   = 512;  // 新しいフォルダボタンを非表示にする
+
+objApl = new ActiveXObject("Shell.Application");
+var hWnd = 0;
+var title = "リネームするフォルダを選択";
+var op = BIF_EDITBOX;
+var initPath = "D:\\";
+var folder = objApl.BrowseForFolder( hWnd, title, op, initPath );
+if( folder  ==  null )
+	{
+	WScript.Echo( "キャンセル!!!!" );
+	}
+else
+	{
+	objFolderItems = folder.Items();
+	for(i=0;i<objFolderItems.Count;i++)
+	{
+    		objItem = objFolderItems.Item(i);
+	
+    		if (objItem.IsFolder==false)
+			{
+       			objItem.Name = name+objItem.Name;
+			}
+	}
+}
+objItem = null
+objFolderItems = null
+objFolder = null
+objApl = null
+
+
+
+
+</script>
+
+</job>
