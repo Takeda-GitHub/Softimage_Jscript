@@ -1,2 +1,3 @@
 # Softimage_Jscript
-softimage
+softimageのスクリプトで、Jscript生成のものになります。
+主にアニメーター用のツールがメインとなります。
