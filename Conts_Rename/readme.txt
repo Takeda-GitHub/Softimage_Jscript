@@ -1,10 +1,10 @@
-外部制御されているヌルの名前って、「Null01」とかになりがちじゃないですか？
-もちもん「Global_Ctl.js」を使えば、忘れたときに、このスクリプトを使えば、
-コンスト元の名前を考慮し、名前を変更してくれます。
+�O�����䂳��Ă���k���̖��O���āA�uNull01�v�Ƃ��ɂȂ肪������Ȃ��ł����H
+��������uGlobal_Ctl.js�v���g���΁A�Y�ꂽ�Ƃ��ɁA���̃X�N���v�g���g���΁A
+�R���X�g���̖��O���l�����A���O��ύX���Ă���܂��B
 
-たとえば、
-「LeftArm→null01」
-とコンストをかけていれば、
-「LeftArm→LeftArm_Conts」
-と変更されます。
-※もちろん複数対応済みです。
+���Ƃ��΁A
+�uLeftArm��null01�v
+�ƃR���X�g�������Ă���΁A
+�uLeftArm��LeftArm_Conts�v
+�ƕύX����܂��B
+��������񕡐��Ή��ς݂ł��B
